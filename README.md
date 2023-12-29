@@ -59,3 +59,10 @@
 2. 需要在自己的服务器中加入ssh公钥，并把ssh私钥、服务器地址、用户和对应的文件目录加入到需要同步的github仓库的secrets中去，才能通过ssh将覆盖率的结果传输到该服务器上面。
 3. 然后通过`your_server_ip:8088`就可以访问到main.html，并通过点击访问不同的子页面看到每个子目录的覆盖率。
     ![Coverage page](imgs/coverage_page.png)
+
+## 参考
+https://github.com/Yikun/hub-mirror-action
+https://jasonkayzk.github.io/2020/10/23/%E4%BD%BF%E7%94%A8Github-Actions%E5%90%8C%E6%AD%A5github%E5%92%8Cgitee%E4%BB%93%E5%BA%93/
+https://www.chenshaowen.com/blog/how-to-trigger-github-action-remotely.html
+https://p3terx.com/archives/github-actions-manual-trigger.html
+http://www.likehide.com/blogs/python/hugo_webhook_at_gitee/
