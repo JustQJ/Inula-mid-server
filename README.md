@@ -27,7 +27,7 @@
     修改`gitee-webhook-server\trigger.sh`脚本中的`repository_name`为需要同步的github仓库名，`github_token`为仓库授权的用户的认证token，可以在https://github.com/settings/tokens 中创建。
 5.  到`gitee-webhook-server`文件夹下启动服务：`gunicorn -w 4 -b 0.0.0.0:5000 server_app:app` 这里的5000为和上面步骤3配置中的对应的端口。
 6.  在gitee仓库的webhooks中添加需要的WebHook，填写步骤4中设置的密码和服务器的地址，并勾选需要的触发事件，我们的实现中是Push和Tag Push事件。如下图所示
-    ![gitee Webhook](imgs\gitee_webhook_setting.png)
+    ![gitee Webhook](imgs/gitee_webhook_setting.png)
 7.  至此，就可以对push和push tag操作进行同步了。
 
 ## 配置测试覆盖率展示网站
@@ -58,4 +58,4 @@
     - `sudo nginx -t && sudo systemctl restart nginx` 检查配置并重启服务
 2. 需要在自己的服务器中加入ssh公钥，并把ssh私钥、服务器地址、用户和对应的文件目录加入到需要同步的github仓库的secrets中去，才能通过ssh将覆盖率的结果传输到该服务器上面。
 3. 然后通过`your_server_ip:8088`就可以访问到main.html，并通过点击访问不同的子页面看到每个子目录的覆盖率。
-    ![Coverage page](imgs\coverage_page.png)
+    ![Coverage page](imgs/coverage_page.png)
