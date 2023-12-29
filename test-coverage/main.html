@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#"/>
+    <title>Inula测试覆盖率</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .background {
+            height: 100%;
+            background-image: url('figs/backgroud.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #333;
+        }
+        
+        h1 {
+            font-size: 56px; /* Adjust the font size as needed */
+            margin-top: 30px; /* Add top margin to create space from the top edge */
+            padding-top: 20px; /* Additional padding at the top, if needed */
+            color: #5100ff; /* Example text color, adjust as needed */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* This will fit as many columns as it can based on the screen width, with each column being at least 250px wide */
+            gap: 10px;
+            justify-content: center;
+            padding: 20px; /* Reduced padding to fit images better */
+            margin-top: 20px; /* Adjusted margin to ensure images fit on the screen */
+        }
+
+
+        .grid-item {
+            padding: 10px; /* Reduced padding for each grid item */
+            transition: transform 0.2s;
+            display: flex; /* Use flexbox for centering the image */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item img {
+            max-width: 100%; /* Ensure the image is not larger than the container */
+            max-height: 250px; /* Adjust the max-height to fit the screen */
+            height: auto; /* Maintain the aspect ratio */
+            border: 2px solid #007bff;
+            border-radius: 10px;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05); /* Slight scale to not overflow the page */
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Additional styles can be added here */
+    </style>
+</head>
+<body>
+
+<div class="background">
+    <h1>OpenInula Test Coverage</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="inula-packages/inula/coverage/lcov-report/index.html">
+                <img src="figs/inula-floder.png" alt="Inula Report" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="inula-packages/inula-request/coverage/lcov-report/index.html">
+                <img src="figs/inula-request-floder.png" alt="Inula-Request Report" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="inula-packages/inula-intl/coverage/lcov-report/index.html">
+                <img src="figs/inula-intl-floder.png" alt="Inula-Intl Report" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="inula-packages/inula-router/coverage/lcov-report/index.html">
+                <img src="figs/inula-router-floder.png" alt="Inula-Router Report" />
+            </a>
+        </div>
+        <!-- Add more grid items as needed -->
+    </div>
+</div>
+
+</body>
+</html>
